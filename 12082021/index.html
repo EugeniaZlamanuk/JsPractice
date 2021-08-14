@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <script src="main.js"></script>
 </head>
 <body>
-<button onclick="buttonClick1()">Задание 1</button>
-<button onclick="buttonClick2()">Задание 2</button>
-<button onclick="buttonClick3()">Задание 3</button>
+<input type="button" id="hider" value="Я скрываю текст" onclick="hideText(text)"/>
+<div id="text">TEXT TO HIDE</div>
+<script>
+    function hideText() {
+        let elem = document.getElementById("text");
+        console.log(elem);
+        elem.style.color = 'transparent';
+    }
+
+</script>
+
+<button  onclick="selfhide(this)">Я скрываю сама себя</button>
+<script>
+    function selfhide(elem) {
+       console.log(elem);
+        elem.style.visibility = 'hidden';
+
+    }
+
+</script>
 </body>
+
 </html>
